@@ -14,6 +14,7 @@
                 }
             }
             Console.WriteLine(sum);
+            //komentar
         }
     }
 }
