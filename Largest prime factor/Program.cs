@@ -4,35 +4,45 @@
     {
         static void Main(string[] args)
         {
-            ulong num = 30;
+            ulong num = 600851475143; // -> 2 * 7 * 13
             ulong newNum = 0;
             ulong result = 0;
 
-            //kontrolujem cisla delitelnosti
-            for (ulong i = 2; i < num; i++) 
+            //kontrolujem cisla od 2 do num
+            for (ulong i = 2; i <= num; i++) // -> 2..182 dokopy spravi 180 operacii
             {
-                //delitele cisla num
-                if (num % i ==0)
+                //cele delitele cisla cisla num
+                if (num % i == 0)
                 {
-                    bool jePrvocislo = true;
+                    newNum = i;
 
+                    // My nevieme ci newNum je prvocislo -> povieme si okej tak nech je prvocislom
+                    // a podme toto tvrdenie skusit vyvratit -> ak ho vyvratime => nieje prvocislo
+                    // ak ho nevyvratime => je prvocislo
+                    bool jePrvocislo = true;
                     //kontrola prvociselnosti i-cka
-                    for (ulong j = 2; j < i; j++)
+                    // Pokusame sa vyvratit tvrdenie ze jeProvcislo je pravda
+                    for (ulong j = 2; j < newNum; j++)
                     {
-                        if (i % j == 0)
+                        // Nasli sme take cislo co to deli => nemoze byt prvocislo
+                        if (newNum % j == 0) // 12 / 2 => 6 ale 12 % 2 => zvysok to je 0
                         {
                             jePrvocislo = false;
-                            break;
+                            break; // V momente ked sa dostanem na riadok 31 => vypni forko a pokracuj na riadok 34
                         }
                     }
                     //je teda prvocislo???
-                    if (jePrvocislo) 
+                    if (jePrvocislo)
                     {
-                        result = i;
+                        // Nasli sme 2 -> 182 / 2 -> 91 * 2
+                        // Nasli sme 7 -> 91 / 7 -> 13 * 7 * 2
+                        num = num / newNum; // newNum je prvocislo + deli to cislo num
+                        result = newNum; // len si odlozime delitel
                     }
                 }
             }
-            Console.WriteLine(newNum);
+
+            Console.WriteLine(result);
         }
     }
 }
