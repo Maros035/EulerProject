@@ -11,7 +11,7 @@
             //kontrolujem cisla od 2 do num
             for (ulong i = 2; i <= num; i++) // -> 2..182 dokopy spravi 180 operacii
             {
-                //cele delitele cisla cisla num
+                //cele delitele cisla num
                 if (num % i == 0)
                 {
                     newNum = i;
