@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Siber Maroš\\Desktop\\Programovanie\\EulerProject\\Multiples of 3 or 5\\Multiples of 3 or 5.csproj",
-      "projectName": "Multiples of 3 or 5",
-      "projectPath": "C:\\Users\\Siber Maroš\\Desktop\\Programovanie\\EulerProject\\Multiples of 3 or 5\\Multiples of 3 or 5.csproj",
+      "projectUniqueName": "C:\\Users\\Siber Maroš\\Desktop\\Programovanie\\EulerProject\\Multiples of 3 or 5\\1_Multiples of 3 or 5.csproj",
+      "projectName": "1_Multiples of 3 or 5",
+      "projectPath": "C:\\Users\\Siber Maroš\\Desktop\\Programovanie\\EulerProject\\Multiples of 3 or 5\\1_Multiples of 3 or 5.csproj",
       "packagesPath": "C:\\Users\\Siber Maroš\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Siber Maroš\\Desktop\\Programovanie\\EulerProject\\Multiples of 3 or 5\\obj\\",
       "projectStyle": "PackageReference",

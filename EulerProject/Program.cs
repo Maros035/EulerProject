@@ -1,4 +1,6 @@
-﻿namespace EulerProject
+﻿using System;
+
+namespace EulerProject
 {
     internal class Program
     {

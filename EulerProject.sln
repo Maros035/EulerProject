@@ -5,13 +5,19 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EulerProject", "EulerProject\EulerProject.csproj", "{6083521D-A67E-42FF-9AEA-9E5055071130}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Multiples of 3 or 5", "Multiples of 3 or 5\Multiples of 3 or 5.csproj", "{C978A8A3-A8E8-46FE-AAA5-C4B9D74E5B81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "1_Multiples of 3 or 5", "Multiples of 3 or 5\1_Multiples of 3 or 5.csproj", "{C978A8A3-A8E8-46FE-AAA5-C4B9D74E5B81}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Even Fibonacci numbers", "Even Fibonacci numbers\Even Fibonacci numbers.csproj", "{48A91E5C-BD79-4951-AE44-9E75F53EA757}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "2_Even Fibonacci numbers", "Even Fibonacci numbers\2_Even Fibonacci numbers.csproj", "{48A91E5C-BD79-4951-AE44-9E75F53EA757}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Largest prime factor", "Largest prime factor\Largest prime factor.csproj", "{07FD6A1A-EAC8-44EA-B216-8A2072DF8F47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "3_Largest prime factor", "Largest prime factor\3_Largest prime factor.csproj", "{07FD6A1A-EAC8-44EA-B216-8A2072DF8F47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Largest palindrome product", "Largest palindrome product\Largest palindrome product.csproj", "{E45337A3-C3CD-47B0-8954-DF68E3DA8E3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "4_Largest palindrome product", "Largest palindrome product\4_Largest palindrome product.csproj", "{E45337A3-C3CD-47B0-8954-DF68E3DA8E3D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5_Smallest multiple", "Smallest multiple\5_Smallest multiple.csproj", "{09BFE313-AFFF-479B-85DF-F8431D889702}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6_Sum square difference", "6_Sum square difference\6_Sum square difference.csproj", "{27E4EAE3-F05C-4E91-8ED9-58A63443FB39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7_10001st prime", "7_10001st prime\7_10001st prime.csproj", "{44B84DBD-5028-4899-9A72-FB6868F526CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +45,18 @@ Global
 		{E45337A3-C3CD-47B0-8954-DF68E3DA8E3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E45337A3-C3CD-47B0-8954-DF68E3DA8E3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E45337A3-C3CD-47B0-8954-DF68E3DA8E3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09BFE313-AFFF-479B-85DF-F8431D889702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09BFE313-AFFF-479B-85DF-F8431D889702}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09BFE313-AFFF-479B-85DF-F8431D889702}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09BFE313-AFFF-479B-85DF-F8431D889702}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27E4EAE3-F05C-4E91-8ED9-58A63443FB39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27E4EAE3-F05C-4E91-8ED9-58A63443FB39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27E4EAE3-F05C-4E91-8ED9-58A63443FB39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27E4EAE3-F05C-4E91-8ED9-58A63443FB39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44B84DBD-5028-4899-9A72-FB6868F526CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44B84DBD-5028-4899-9A72-FB6868F526CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44B84DBD-5028-4899-9A72-FB6868F526CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44B84DBD-5028-4899-9A72-FB6868F526CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
