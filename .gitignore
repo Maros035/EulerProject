@@ -15,6 +15,7 @@
 
 */obj/
 */bin/
+/EulerProject/bin/
 
 # Mono auto generated files
 mono_crash.*

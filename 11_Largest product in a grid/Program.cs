@@ -1,10 +1,10 @@
-﻿using System;
-
-namespace EulerProject
+﻿namespace _11_Largest_product_in_a_grid
 {
     internal class Program
-    {
-        static int[,] cisla = new int[,]
+    {   
+        static void Main(string[] args)
+        {
+            int[,] cisla = new int[,]
                 {
                             { 08, 02, 22, 97, 38, 15, 00, 40, 00, 75, 04, 05, 07, 78, 52, 12, 50, 77, 91, 08},
                             { 49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 04, 56, 62, 00},
@@ -27,14 +27,76 @@ namespace EulerProject
                             { 20, 73, 35, 29, 78, 31, 90, 01, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 05, 54},
                             { 01, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 01, 89, 19, 67, 48}
                };
-        static void Main(string[] args)
-        {
 
-        }
+            long result = 1, max = 0;
 
-        static int[,] DajMiPolozky (int x, int y)
-        {
-            if (y < 20 && )
+            //vertikal
+            for (int j = 0; j < 20; j++)
+            {
+                for (int i = 0; i < 20 - 4; i++)
+                {
+                    for (int q = 0; q < 4; q++)
+                    {
+                        //result *= x[j][i + q]; 
+                    }
+                    if (result > max)
+                    {
+                        max = result;
+                    }
+                }
+            }
+
+            //horizontal
+            for (int j = 0; j < 20; j++)
+            {
+                for (int i = 0; i < 20 - 4; i++)
+                {
+                    for (int q = 0; q < 4; q++)
+                    {
+                        //result *= x[i + q][j];
+                    }
+                    if (result > max)
+                    {
+                        max = result;
+                    }
+                }
+            }
+
+            //diagonal
+            for (int j = 0; j < 20 - 4; j++)
+            {
+                for (int i = 0; i < 20 - 4; i++)
+                {
+                    for (int q = 0; q < 4; q++)
+                    {
+                        //result *= x[i + q][j + q];
+                    }
+                    if (result > max)
+                    {
+                        max = result;
+                    }
+                }
+            }
+
+            //vedlajsie diagonaly
+            for (int j = 4; j < 20 - 4; j++)
+            {
+                for (int i = 0; i < 20 - 4; i++)
+                {
+                    for (int q = 0; q < 4; q++)
+                    {
+                        //result *= x[i + q][j - q];
+                    }
+                    if (result > max)
+                    {
+                        max = result;
+                    }
+                }
+            }
+            Console.WriteLine(max);
+            //skontrolovat horizontalne
+            //skontrolovat vertikalne
+            //skontrolovat diagonalne
         }
     }
 }

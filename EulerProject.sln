@@ -17,9 +17,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5_Smallest multiple", "Smal
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6_Sum square difference", "6_Sum square difference\6_Sum square difference.csproj", "{27E4EAE3-F05C-4E91-8ED9-58A63443FB39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7_10001st prime", "7_10001st prime\7_10001st prime.csproj", "{44B84DBD-5028-4899-9A72-FB6868F526CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "7_10001st prime", "7_10001st prime\7_10001st prime.csproj", "{44B84DBD-5028-4899-9A72-FB6868F526CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8_Largest product in a series", "8_Largest product in a series\8_Largest product in a series.csproj", "{7D532AAA-3EE1-4D4A-B487-AF1F0836E450}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "8_Largest product in a series", "8_Largest product in a series\8_Largest product in a series.csproj", "{7D532AAA-3EE1-4D4A-B487-AF1F0836E450}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "9_Special Pythagorean triplet", "9_Special Pythagorean triplet\9_Special Pythagorean triplet.csproj", "{2B01FDFA-ACDD-4C47-B22F-CB02E51C2293}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10_Summation of primes", "10_Summation of primes\10_Summation of primes.csproj", "{66D8851F-19E7-4A6E-A733-10C7346D3A23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11_Largest product in a grid", "11_Largest product in a grid\11_Largest product in a grid.csproj", "{0DE2F3D2-AA50-4C5B-85F1-C0E92FFA43A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +69,18 @@ Global
 		{7D532AAA-3EE1-4D4A-B487-AF1F0836E450}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D532AAA-3EE1-4D4A-B487-AF1F0836E450}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D532AAA-3EE1-4D4A-B487-AF1F0836E450}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B01FDFA-ACDD-4C47-B22F-CB02E51C2293}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B01FDFA-ACDD-4C47-B22F-CB02E51C2293}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B01FDFA-ACDD-4C47-B22F-CB02E51C2293}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B01FDFA-ACDD-4C47-B22F-CB02E51C2293}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66D8851F-19E7-4A6E-A733-10C7346D3A23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66D8851F-19E7-4A6E-A733-10C7346D3A23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66D8851F-19E7-4A6E-A733-10C7346D3A23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66D8851F-19E7-4A6E-A733-10C7346D3A23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DE2F3D2-AA50-4C5B-85F1-C0E92FFA43A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DE2F3D2-AA50-4C5B-85F1-C0E92FFA43A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DE2F3D2-AA50-4C5B-85F1-C0E92FFA43A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DE2F3D2-AA50-4C5B-85F1-C0E92FFA43A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
