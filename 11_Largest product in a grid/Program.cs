@@ -4,7 +4,7 @@
     {   
         static void Main(string[] args)
         {
-            int[,] cisla = new int[,]
+            int[,] data = new int[,]
                 {
                             { 08, 02, 22, 97, 38, 15, 00, 40, 00, 75, 04, 05, 07, 78, 52, 12, 50, 77, 91, 08},
                             { 49, 49, 99, 40, 17, 81, 18, 57, 60, 87, 17, 40, 98, 43, 69, 48, 04, 56, 62, 00},
@@ -28,75 +28,96 @@
                             { 01, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 01, 89, 19, 67, 48}
                };
 
-            long result = 1, max = 0;
-
-            //vertikal
-            for (int j = 0; j < 20; j++)
+            int GetCoordinatesBiggestValue(int row, int column)
             {
-                for (int i = 0; i < 20 - 4; i++)
+                int value = 0;
+
+                // Doprava
+                if (column + 3 < 20)
                 {
-                    for (int q = 0; q < 4; q++)
+                    int product = 1;
+
+                    product *= data[row, column];
+                    product *= data[row + 1, column];
+                    product *= data[row + 2, column];
+                    product *= data[row + 3, column];
+
+                    if (value < product)
                     {
-                        //result *= x[j][i + q]; 
+                        value = product;
                     }
-                    if (result > max)
+                }
+
+                // Doľava
+                if (column - 3 >= 0)
+                {
+                    int product = 1;
+
+                    product *= data[row, column];
+                    product *= data[row - 1, column];
+                    product *= data[row - 2, column];
+                    product *= data[row - 3, column];
+
+                    if (value < product)
                     {
-                        max = result;
+                        value = product;
+                    }
+                }
+
+                // Hore
+                if (row - 3 >= 0)
+                {
+
+                }
+
+                // Dole
+                if (row + 3 < 20)
+                {
+
+                }
+
+                // V pravo hore
+                if (column + 3 < 20 && row - 3 >= 0)
+                {
+
+                }
+
+                // V pravo dole
+                if (column + 3 < 20 && row + 3 < 20)
+                {
+
+                }
+
+                // V ľavo hore
+                if (column - 3 >= 0 && row - 3 >= 0)
+                {
+
+                }
+
+                // v ľavo dole
+                if (column - 3 >= 0 && row + 3 < 20)
+                {
+
+                }
+
+                return value;
+            }
+
+            int max = 0;
+            for (int row = 0; row < 20; row++)
+            {
+                for (int column = 0; column < 20; column++)
+                {
+                    int value = GetCoordinatesBiggestValue(row, column);
+
+                    if (max < value)
+                    {
+                        max = value;
                     }
                 }
             }
 
-            //horizontal
-            for (int j = 0; j < 20; j++)
-            {
-                for (int i = 0; i < 20 - 4; i++)
-                {
-                    for (int q = 0; q < 4; q++)
-                    {
-                        //result *= x[i + q][j];
-                    }
-                    if (result > max)
-                    {
-                        max = result;
-                    }
-                }
-            }
-
-            //diagonal
-            for (int j = 0; j < 20 - 4; j++)
-            {
-                for (int i = 0; i < 20 - 4; i++)
-                {
-                    for (int q = 0; q < 4; q++)
-                    {
-                        //result *= x[i + q][j + q];
-                    }
-                    if (result > max)
-                    {
-                        max = result;
-                    }
-                }
-            }
-
-            //vedlajsie diagonaly
-            for (int j = 4; j < 20 - 4; j++)
-            {
-                for (int i = 0; i < 20 - 4; i++)
-                {
-                    for (int q = 0; q < 4; q++)
-                    {
-                        //result *= x[i + q][j - q];
-                    }
-                    if (result > max)
-                    {
-                        max = result;
-                    }
-                }
-            }
             Console.WriteLine(max);
-            //skontrolovat horizontalne
-            //skontrolovat vertikalne
-            //skontrolovat diagonalne
         }
     }
 }
