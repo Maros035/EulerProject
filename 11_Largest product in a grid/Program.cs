@@ -28,95 +28,171 @@
                             { 01, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 01, 89, 19, 67, 48}
                };
 
+            //funkcia
+            //kontrolujem ci mozem ist od pozicie o 4 do akehokolvek smeru
             int GetCoordinatesBiggestValue(int row, int column)
             {
                 int value = 0;
 
-                // Doprava
+                // Doprava - ak su vedla daneho cisla smerom doprava dalsie 3 a je to stale menej ako 20 (index)...
                 if (column + 3 < 20)
                 {
-                    int product = 1;
+                    int product = 1;//musi byt 1 pretoze do produktu nasobim
 
-                    product *= data[row, column];
-                    product *= data[row + 1, column];
-                    product *= data[row + 2, column];
-                    product *= data[row + 3, column];
+                    //...prinasob do produktu
+                    product *= data[row, column];       //...cislo na pozicii row, column
+                    product *= data[row, column + 1];   //...prveho suseda vpravo
+                    product *= data[row, column + 2];   //...druheho suseda vpravo
+                    product *= data[row, column + 3];   //...tretieho suseda vpravo
 
+                    //ak je value mensia ako sucin
                     if (value < product)
                     {
-                        value = product;
+                        value = product;//nova hodnota value = sucin
                     }
                 }
 
-                // Doľava
+                // Doľava - ak su vedla daneho cisla smerom dolava dalsie 3 a je to stale menej alebo rovnake ako suradnica daneho cisla......
                 if (column - 3 >= 0)
                 {
                     int product = 1;
+                    //...prinasob do produktu
+                    product *= data[row, column];       //...cislo na pozicii row, column
+                    product *= data[row, column - 1];   //...prveho suseda vlavo
+                    product *= data[row, column - 2];   //...druheho suseda vlavo
+                    product *= data[row, column - 3];   //...tretieho suseda vlavo
 
-                    product *= data[row, column];
-                    product *= data[row - 1, column];
-                    product *= data[row - 2, column];
-                    product *= data[row - 3, column];
-
+                    //ak je value mensia ako sucin
                     if (value < product)
                     {
-                        value = product;
+                        value = product;//nova hodnota value = sucin
                     }
                 }
 
-                // Hore
+                // Hore - ak su nad danym cislom dalsie 3 a je to stale menej alebo rovnake ako suradnica daneho cisla...
                 if (row - 3 >= 0)
                 {
+                    int product = 1;
+                    //...prinasob do produktu
+                    product *= data[row, column];       //...cislo na pozicii row, column
+                    product *= data[row - 1, column];   //...prveho suseda smerom hore
+                    product *= data[row - 2, column];   //...druheho suseda smerom hore
+                    product *= data[row - 3, column];   //...tretieho suseda smerom hore
 
+                    //ak je value mensia ako sucin
+                    if (value < product)
+                    {
+                        value = product;//nova hodnota value = sucin
+                    }
                 }
 
-                // Dole
+                // Dole - ak su pod danym cislom dalsie 3 a je to stale menej 20 (index)...
                 if (row + 3 < 20)
                 {
+                    int product = 1;
+                    //...prinasob do produktu
+                    product *= data[row, column];       //...cislo na pozicii row, column
+                    product *= data[row + 1, column];   //...prveho suseda smerom dole
+                    product *= data[row + 2, column];   //...druheho suseda smerom dole
+                    product *= data[row + 3, column];   //...tretieho suseda smerom dole
 
+                    //ak je value mensia ako sucin
+                    if (value < product)
+                    {
+                        value = product;//nova hodnota value = sucin
+                    }
                 }
 
                 // V pravo hore
                 if (column + 3 < 20 && row - 3 >= 0)
                 {
+                    int product = 1;
+                    //...prinasob do produktu
+                    product *= data[row, column];           
+                    product *= data[row - 1, column + 1];   
+                    product *= data[row - 2, column + 2];   
+                    product *= data[row - 3, column + 3];   
 
+                    //ak je value mensia ako sucin
+                    if (value < product)
+                    {
+                        value = product;//nova hodnota value = sucin
+                    }
                 }
 
                 // V pravo dole
                 if (column + 3 < 20 && row + 3 < 20)
                 {
+                    int product = 1;
+                    //...prinasob do produktu
+                    product *= data[row, column];           
+                    product *= data[row + 1, column + 1];
+                    product *= data[row + 2, column + 2];
+                    product *= data[row + 3, column + 3];
 
+                    //ak je value mensia ako sucin
+                    if (value < product)
+                    {
+                        value = product;//nova hodnota value = sucin
+                    }
                 }
 
                 // V ľavo hore
                 if (column - 3 >= 0 && row - 3 >= 0)
                 {
+                    int product = 1;
+                    //...prinasob do produktu
+                    product *= data[row, column];           
+                    product *= data[row - 1, column - 1];
+                    product *= data[row - 2, column - 2];
+                    product *= data[row - 3, column - 3];
 
+                    //ak je value mensia ako sucin
+                    if (value < product)
+                    {
+                        value = product;//nova hodnota value = sucin
+                    }
                 }
 
                 // v ľavo dole
                 if (column - 3 >= 0 && row + 3 < 20)
                 {
+                    int product = 1;
+                    //...prinasob do produktu
+                    product *= data[row, column];           
+                    product *= data[row + 1, column - 1];
+                    product *= data[row + 2, column - 2];
+                    product *= data[row + 3, column - 3];
 
+                    //ak je value mensia ako sucin
+                    if (value < product)
+                    {
+                        value = product;//nova hodnota value = sucin
+                    }
                 }
 
                 return value;
             }
 
             int max = 0;
+            //kontrolujem vsetky riadky
             for (int row = 0; row < 20; row++)
             {
+                //vsetky stlpce
                 for (int column = 0; column < 20; column++)
                 {
+                    //zavolam funkcie pre overenie ci ma zvolene cislo dalsich 3 susedov v danom smere...
+                    //...a ak ma, tak mi ich v tych smeroch vynasobi a vrati mi najvacsi zo sucinov v hodnote value
                     int value = GetCoordinatesBiggestValue(row, column);
 
+                    //ak v nejakej inej pozicii najde sucin "value" ktory je vaci ako aktualne max, tak ho prepise
                     if (max < value)
                     {
                         max = value;
                     }
                 }
             }
-
+            //vypis max
             Console.WriteLine(max);
         }
     }
