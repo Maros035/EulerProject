@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace _13_Highly_divisible_triangular_number
+﻿namespace _12_Highly_divisible_triangular_number
 {
     internal class Program
     {
@@ -12,7 +10,7 @@ namespace _13_Highly_divisible_triangular_number
             //vypisujem trojuholnikove cisla
             for (int i = 1; i > 0; i++)
             {
-                triangleNum = (i*(i+1)/2);
+                triangleNum = (i * (i + 1) / 2);
                 numDivisors = 0;
 
                 //kolko ma triangleNum delitelov?
