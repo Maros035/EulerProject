@@ -109,11 +109,11 @@
             // Rozdelenie reťazca na základe znaku nového riadka
             string[] stringNumbers = data.Split('\n');
             string sum = "";
-            sum = sum.PadLeft(stringNumbers[0].Length, '0');
+            sum = sum.PadLeft(stringNumbers[0].Length - 1, '0');
 
             for (int i = 0; i < stringNumbers.Length; i++)
             {
-                stringNumbers[i] = stringNumbers[i].Replace(" ", "");
+                stringNumbers[i] = stringNumbers[i].Trim();
                 sum = Scitanie(sum, stringNumbers[i]);
             }
 
@@ -121,13 +121,12 @@
         }
         static string Scitanie(string number1, string number2)
         {
-            number2 = number2.PadLeft(number1.Length - number2.Length, '0');
+            number2 = number2.PadLeft(number1.Length, '0');
             int carry = 0;  //prenasam desiatky
             string result = "";
-            int length = number1.Length;
 
             // Sčítanie pod seba
-            for (int i = length - 1; i >= 0; i--)    //index
+            for (int i = number1.Length - 1; i >= 0; i--)    //index
             {
                 int digit1 = int.Parse(number1[i].ToString());  //prevadzam cislice na int  
                 int digit2 = int.Parse(number2[i].ToString());  //prevadzam cislice na int  
