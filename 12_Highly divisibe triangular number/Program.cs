@@ -5,7 +5,7 @@
         //vysledok je 76576500
         static void Main(string[] args)
         {
-            long triangleNum = 0, numDivisors = 0, count = 0;
+            long triangleNum = 0, numDivisors = 0;
 
             //vypisujem trojuholnikove cisla
             for (int i = 1; i > 0; i++)
